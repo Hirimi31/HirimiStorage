@@ -1,4 +1,4 @@
---// Key System Fix4
+--// Key System Fix5
 repeat task.wait() until game:IsLoaded()
 KeySystemGui = Instance.new("ScreenGui");
 MainKey = Instance.new("Frame");
@@ -74,7 +74,7 @@ LogoHub.Parent = MainKey
 
 InputKey.Font = Enum.Font.GothamBold
 InputKey.PlaceholderText = "Input Your Key Here..."
-InputKey.Text = ""
+InputKey.Text = "Input Your Key Here..."
 InputKey.TextColor3 = Color3.fromRGB(255, 255, 255)
 InputKey.TextSize = 12
 InputKey.TextWrapped = true
@@ -319,16 +319,15 @@ XButton.MouseButton1Down:Connect(function()
     end
 end)
 SumbitButton.MouseButton1Down:Connect(function()
-    CheckKey = CopyTextBox.Text
-    if PandaAuth:ValidateKey(ServiceID, CheckKey) then
-        _G.KeyOld = CheckKey
+    if PandaAuth:ValidateKey(ServiceID, InputKey.Text) then
+        _G.KeyOld = InputKey.Text
         game.CoreGui.KeySystemGui:Destroy()
         loadstring(game:HttpGet(ccb .. aab))()
     else
         game.Players.LocalPlayer:Kick("Incorrect Key")
     end
 end)
-local foldername = "Hirimii Hub Auto Bounty"
+local foldername = "Memories Hub"
 local filename = foldername.."/OldKey.json"
 function saveSettings()
     local HttpService = game:GetService("HttpService")
