@@ -1,3 +1,4 @@
+--// Key System Fix
 repeat task.wait() until game:IsLoaded()
 KeySystemGui = Instance.new("ScreenGui");
 MainKey = Instance.new("Frame");
@@ -303,8 +304,8 @@ function MakeDraggable(topbarobject, object)
 end
 MakeDraggable(MainKey,MainKey)
 local LibVersion = "v2" -- ( v3 & v4 )
-local LibType = "hirimii" -- Available ( FiveM or Roblox ) always use small letter
-local ServiceID = "pandadevkit" -- Replace this with your Service ID
+local LibType = "roblox" -- Available ( FiveM or Roblox ) always use small letter
+local ServiceID = "hirimii" -- Replace this with your Service ID
 local PandaAuth = loadstring(game:HttpGet('https://pandadevelopment.net/servicelib?service='..ServiceID..'&core='..LibType..'&param='..LibVersion))()
 -- Validation ( Regular Key )
 local aab = "\77\101\109\111\114\105\101\115\115\49\47\76\111\97\100\101\114\77\101\109\111\114\105\101\115\47\109\97\105\110\47\77\101\109\111\114\105\101\115\72\46\108\117\97"
