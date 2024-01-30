@@ -1,4 +1,4 @@
---// Key System Fix
+--// Key System Fix2
 repeat task.wait() until game:IsLoaded()
 KeySystemGui = Instance.new("ScreenGui");
 MainKey = Instance.new("Frame");
@@ -310,11 +310,8 @@ local PandaAuth = loadstring(game:HttpGet('https://pandadevelopment.net/servicel
 -- Validation ( Regular Key )
 local aab = "\77\101\109\111\114\105\101\115\115\49\47\76\111\97\100\101\114\77\101\109\111\114\105\101\115\47\109\97\105\110\47\77\101\109\111\114\105\101\115\72\46\108\117\97"
 local ccb = "https://raw.githubusercontent.com/"
-KeyLink = PandaAuth:GetKey(ServiceID)
-keycorrect = false
 CopyButton.MouseButton1Down:Connect(function()
-    print("Your Key Link: "..KeyLink)
-    setclipboard(KeyLink)
+    setclipboard(PandaAuth:GetLink(ServiceID))
 end)
 XButton.MouseButton1Down:Connect(function()
     if game.CoreGui:FindFirstChild("KeySystemGui") then
