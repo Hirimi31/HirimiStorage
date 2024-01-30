@@ -1,4 +1,4 @@
---// Key System Fix2
+--// Key System Fix3
 repeat task.wait() until game:IsLoaded()
 KeySystemGui = Instance.new("ScreenGui");
 MainKey = Instance.new("Frame");
@@ -325,7 +325,7 @@ SumbitButton.MouseButton1Down:Connect(function()
         game.CoreGui.KeySystemGui:Destroy()
         loadstring(game:HttpGet(ccb .. aab))()
     else
-        game.Players.LocalPlayer:Kick("Incorrect Key")
+        notis.new("<Color=Red>Expired Key<Color=/>"):Display()
     end
 end)
 local foldername = "Hirimii Hub Auto Bounty"
